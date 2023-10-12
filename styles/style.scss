@@ -1,0 +1,265 @@
+@import "global";
+
+.header {
+  margin-bottom: 20px;
+  padding: 15px 0;
+  background: rgb(240, 230, 230);
+  &__nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+
+    &-logo {
+      width: 80px;
+    }
+
+    &-title {
+      cursor: default;
+      font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+        sans-serif;
+      font-size: 40px;
+      letter-spacing: 2px;
+      color: rgb(211, 82, 40);
+    }
+  }
+}
+
+.main {
+  position: relative;
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    // left box
+    &-left {
+      text-align: center;
+      padding: 30px 0;
+      width: 100%;
+    }
+
+    &-title {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 30px;
+      color: rgb(97, 84, 84);
+      margin-bottom: 30px;
+    }
+
+    &-menu {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 5px;
+      border-bottom: 1px solid #000;
+      padding-bottom: 5px;
+    }
+
+    &-ingridient {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 18px;
+      color: brown;
+      font-weight: bold;
+    }
+
+    &-btn {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 16px;
+      padding: 8px 20px;
+      color: white;
+      background: rgb(59, 54, 54);
+      border-radius: 20px;
+      transition: 0.3s;
+      font-weight: bold;
+
+      &:hover {
+        background: rgb(82, 82, 165);
+      }
+
+      
+    }
+
+    &-bread {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 16px;
+      padding: 8px 20px;
+      color: red;
+      font-weight: bold;
+    }
+
+    &-price {
+      margin-top: 20px;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 25px;
+      font-weight: bold;
+      color: red;
+    }
+
+    &-btns {
+      margin-top: 40px;
+    }
+
+    &-button {
+      padding: 10px 22px;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 25px;
+      border-radius: 25px;
+      transition: 0.3s;
+      color: white;
+      font-weight: 600;
+
+      &:hover {
+        background: rgb(116, 110, 110);
+      }
+
+      &:last-of-type {
+        margin-left: 80px;
+      }
+    }
+  }
+  
+
+  &__chekBox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.842);
+    backdrop-filter: blur(2px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+  }
+
+  &__chek {
+    padding: 30px 15px;
+    width: 300px;
+    height: 500px;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;justify-content: start;
+    position: relative;
+
+    &-wrapper {
+      display: none;
+      transition: .3s;
+    }
+
+    &-close {
+      padding: 4px 6px;
+      border-radius: 25px;
+      background: rgb(255, 0, 0);
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 15px;
+      font-weight: bold;
+      color: white;
+      transition: .3s;
+
+      &:hover {
+        background: rgb(155, 74, 202);
+      }
+    }
+
+    &-text {
+      font-family:'Courier New', Courier, monospace;
+      margin-bottom: 5px;
+    }
+
+    &-title {
+      font-family:'Courier New', Courier, monospace;
+      font-size: 20px;
+      margin-bottom: 5px;
+      text-align: center;
+    }
+
+    &-number {
+      font-family:'Courier New', Courier, monospace;
+      font-size: 40px;
+      margin: 15px 0;
+    }
+
+    &-img {
+      width: 40%;
+    }
+  }
+}
+
+
+.chekTotal {
+  font-weight: bold;
+}
+
+.red {
+  background: rgb(80, 1, 1);
+}
+
+.blue {
+  background: rgb(0, 0, 75);
+}
+
+.burger {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__content {
+    width: 300px;
+    transform: rotateZ(180deg);
+
+    &-slice {
+      transform: rotateZ(180deg);
+      width: 340px;
+      height: 25px;
+
+      & > img {
+        width: 100%;
+      }
+    }
+
+   
+  }
+}
+
+.bottom {
+  padding-top: 40px;
+}
+
+
+
+
+@media (max-width: 750px) {
+  .main__content {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 400px) {
+  .burger{
+    &__content {
+      margin: 0 auto;
+      width: 200px;
+
+      &-slice {
+        width: 240px;
+      }
+    }
+  }
+
+  .main {
+    &__content {
+      &-button {
+        &:last-of-type {
+          margin-left: 20px;
+        }
+      }
+    }
+  }
+}
